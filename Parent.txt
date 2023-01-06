@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class pendataan {
+    Scanner as = new Scanner(System.in);
+    String nama,nik,alamat,ntlp;
+
+    public void isiData(String nm,String n) {
+        nama = nm;
+        nik = n;
+    }
+    String masukanNama(){
+        return nama;
+    }
+    String masukanNik(){
+        return nik;
+    }
+    String pekerjaan,alm;
+    String status,nmp,jml;
+
+    void data(){
+        pendataan a = new pendataan();
+        System.out.println("--------------------oOo--------------------");
+        System.out.println("*** Data Warga *** ");
+        System.out.println("Masukan Nama ");
+        String nama = as.nextLine();
+        System.out.println("Masukan NIK ");
+        String nik= as.nextLine();
+        a.isiData(nama, nik);
+        System.out.println("Masukan Alamat ");
+        String alamat = as.nextLine();
+        System.out.println("Masukan No. Tlp ");
+        String ntlp = as.nextLine();
+        System.out.println("--------------------oOo--------------------");
+        System.out.println("*** Data Pekerjaan *** ");
+        System.out.println("Masukan Pekerjaan ");
+        String pekerjaan = as.nextLine();
+        System.out.println("Masukan Alamat Kantor ");
+        String alm = as.nextLine();
+        System.out.println("--------------------oOo--------------------");
+        System.out.println("*** Data Status *** ");
+        System.out.println("Masukan Status ");
+        String status = as.nextLine();
+        System.out.println("Masukan Nama Suami/Istri ");
+        String nmp = as.nextLine();
+        System.out.println("Masukan Jumlah Anak ");
+        String jml = as.nextLine();
+        System.out.println("");
+        System.out.println("Lanjutkan Bayar Iuran ? ");
+        iuran h2 = new iuran();
+        String Lanjut=as.nextLine();
+        if (Lanjut.equals("ya")|| Lanjut.equals("Ya")|| Lanjut.equals("Y")|| Lanjut.equals("y")){
+                h2.dataiuran();
+        }
+    }
+}
